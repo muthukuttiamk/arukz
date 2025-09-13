@@ -42,8 +42,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['contact@arukz.com', 'hello@arukz.com'],
-      action: 'mailto:contact@arukz.com'
+      details: ['muthukuttiamk@gmail.com', 'contact@arukz.com'],
+      action: 'mailto:muthukuttiamk@gmail.com'
     },
     {
       icon: MapPin,
@@ -240,7 +240,7 @@ const Contact = () => {
                       Call Now
                     </a>
                     <a
-                      href="mailto:contact@arukz.com"
+                      href="mailto:muthukuttiamk@gmail.com"
                       className="btn-secondary w-full inline-flex items-center justify-center"
                     >
                       <Mail className="mr-2 w-5 h-5" />
