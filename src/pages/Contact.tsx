@@ -264,15 +264,17 @@ const Contact = () => {
             </p>
           </div>
           <div className="card-premium scroll-reveal">
-            <div className="w-full h-96 bg-muted rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Our Location</h3>
-                <p className="text-muted-foreground">Tirunelveli, Tamil Nadu</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Interactive map integration available
-                </p>
-              </div>
+            <div className="w-full h-96 rounded-xl overflow-hidden">
+              <iframe
+                title="Tirunelveli Location Map"
+                src="https://www.google.com/maps?q=Tirunelveli%2C%20Tamil%20Nadu&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Map of Tirunelveli, Tamil Nadu"
+              />
             </div>
           </div>
         </div>
