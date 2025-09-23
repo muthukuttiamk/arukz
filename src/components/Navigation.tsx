@@ -22,10 +22,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src="/src/assets/arukz-logo.png" alt="Arukz Logo" className="h-10 w-auto" />
             <span className="text-2xl font-bold text-gradient">Arukz</span>
           </Link>
 
@@ -41,10 +39,10 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="flex items-center space-x-4 ml-8">
-              <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+919597841535" className="text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-5 h-5" />
               </a>
-              <a href="mailto:contact@arukz.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:arukzhq@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
               <Link to="/contact" className="btn-primary text-sm py-2 px-6">
@@ -81,10 +79,10 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex items-center justify-center space-x-4 pt-4 border-t border-border">
-                <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+919597841535" className="text-muted-foreground hover:text-primary transition-colors">
                   <Phone className="w-5 h-5" />
                 </a>
-                <a href="mailto:contact@arukz.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:arukzhq@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>

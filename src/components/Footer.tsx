@@ -16,10 +16,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img src="/src/assets/arukz-logo.png" alt="Arukz Logo" className="h-10 w-auto" />
               <span className="text-2xl font-bold text-gradient">Arukz</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
@@ -41,8 +39,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-foreground">Contact</h3>
             <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-center"><Phone className="w-4 h-4 mr-2 text-primary" /> +91 98765 43210</li>
-              <li className="flex items-center"><Mail className="w-4 h-4 mr-2 text-primary" /> <a href="mailto:muthukuttiamk@gmail.com" className="hover:text-primary">muthukuttiamk@gmail.com</a></li>
+              <li className="flex items-center"><Phone className="w-4 h-4 mr-2 text-primary" /> +91 95978 41535</li>
+              <li className="flex items-center"><Mail className="w-4 h-4 mr-2 text-primary" /> <a href="mailto:arukzhq@gmail.com" className="hover:text-primary">arukzhq@gmail.com</a></li>
               <li className="flex items-center"><MapPin className="w-4 h-4 mr-2 text-primary" /> Tirunelveli, Tamil Nadu</li>
             </ul>
           </div>

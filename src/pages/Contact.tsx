@@ -36,14 +36,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 98765 43210', '+91 87654 32109'],
-      action: 'tel:+919876543210'
+      details: ['+91 95978 41535', 'Primary Contact'],
+      action: 'tel:+919597841535'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['muthukuttiamk@gmail.com', 'contact@arukz.com'],
-      action: 'mailto:muthukuttiamk@gmail.com'
+      details: ['arukzhq@gmail.com', 'contact@arukz.com'],
+      action: 'mailto:arukzhq@gmail.com'
     },
     {
       icon: MapPin,
@@ -224,7 +224,7 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold text-foreground">Quick Contact</h3>
                   <div className="space-y-3">
                     <a
-                      href="https://wa.me/919876543210"
+                      href="https://wa.me/919597841535"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-secondary w-full inline-flex items-center justify-center bg-green-500 text-white hover:bg-green-600"
@@ -233,14 +233,14 @@ const Contact = () => {
                       WhatsApp Chat
                     </a>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+919597841535"
                       className="btn-secondary w-full inline-flex items-center justify-center"
                     >
                       <Phone className="mr-2 w-5 h-5" />
                       Call Now
                     </a>
                     <a
-                      href="mailto:muthukuttiamk@gmail.com"
+                      href="mailto:arukzhq@gmail.com"
                       className="btn-secondary w-full inline-flex items-center justify-center"
                     >
                       <Mail className="mr-2 w-5 h-5" />
