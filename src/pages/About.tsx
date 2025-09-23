@@ -38,7 +38,7 @@ const About = () => {
               <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Arukz was born from a passion for helping businesses thrive in the digital age. What started as a personal interest in social media marketing has evolved into a comprehensive digital marketing agency that serves businesses, political campaigns, traditional events, and devotional pages across Tamil Nadu.
+                  Arukz was born from a passion for helping businesses thrive in the digital age. What started as a personal interest in social media marketing has evolved into a comprehensive digital marketing agency that serves businesses, political campaigns, traditional events, and devotional pages across India, with a special focus on Chennai and Tamil Nadu.
                 </p>
                 <p>
                   Our founder brings a unique blend of technical expertise as a DevOps Engineer in Chennai and practical social media marketing experience. This combination allows us to approach digital marketing with both strategic thinking and technical precision.
@@ -113,7 +113,7 @@ const About = () => {
               </div>
               <h3 className="text-3xl font-bold mb-6 text-foreground">Our Vision</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                To become the leading digital marketing agency in Tamil Nadu, known for our innovative approaches, personalized service, and commitment to client success. We envision a future where every business, regardless of size, can leverage the power of digital marketing to achieve their dreams.
+                To become the leading digital marketing agency in India, known for our innovative approaches, personalized service, and commitment to client success. We envision a future where every business, regardless of size, can leverage the power of digital marketing to achieve their dreams.
               </p>
             </div>
           </div>

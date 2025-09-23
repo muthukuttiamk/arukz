@@ -81,7 +81,7 @@ const Home = () => {
               <span className="block text-gradient-secondary">with Arukz</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Social Media Marketing & Advertising Solutions for Tirunelveli, Tuticorin, Kanyakumari & Tenkasi.
+              Social Media Marketing & Advertising Solutions across India with special focus on Chennai & Tamil Nadu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact" className="btn-primary text-lg py-4 px-10 group">
