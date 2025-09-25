@@ -20,6 +20,9 @@ const queryClient = new QueryClient();
 const ScrollReveal = () => {
   const location = useLocation();
   useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

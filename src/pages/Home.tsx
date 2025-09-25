@@ -1,11 +1,22 @@
-import { ArrowRight, Users, Target, TrendingUp, Star, Play } from 'lucide-react';
+import { ArrowRight, Users, Target, TrendingUp, Star, Play, ChevronRight, Sparkles, Zap, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { Share2, Megaphone, Palette, BarChart3 } from 'lucide-react';
 import heroImage from '../assets/hero-bg.jpg';
 
 const Home = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const animatedWords = ['Business', 'Brand', 'Reach', 'Impact'];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % animatedWords.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const services = [
     {
       icon: Share2,
@@ -76,29 +87,55 @@ const Home = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
+            <div className="mb-4 flex justify-center">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
+                <Sparkles className="w-4 h-4 text-yellow-400 mr-2" />
+                <span className="text-white text-sm font-medium">Digital Marketing Experts</span>
+              </div>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-              Grow Your Business
-              <span className="block text-gradient-secondary">with Arukz</span>
+              Grow Your{' '}
+              <span className="relative inline-block">
+                <span className="text-gradient-secondary transition-all duration-500 ease-in-out">
+                  {animatedWords[currentWordIndex]}
+                </span>
+                <Zap className="absolute -top-2 -right-8 w-6 h-6 text-yellow-400 animate-pulse" />
+              </span>
+              <span className="block">with Arukz</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Social Media Marketing & Advertising Solutions across India with special focus on Chennai & Tamil Nadu.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/contact" className="btn-primary text-lg py-4 px-10 group">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <Link to="/contact" className="btn-primary text-lg py-4 px-10 group relative overflow-hidden">
+                <span className="relative z-10">Get Started Today</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
               </Link>
-              <Link to="/portfolio" className="btn-secondary text-lg py-4 px-10 bg-white/10 text-white border border-white/20 hover:bg-white/20">
+              <Link to="/portfolio" className="btn-secondary text-lg py-4 px-10 bg-white/10 text-white border border-white/20 hover:bg-white/20 group">
                 View Our Work
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
+            </div>
+            <div className="flex justify-center items-center space-x-8 text-white/70">
+              <div className="flex items-center">
+                <Globe className="w-5 h-5 mr-2" />
+                <span>India Wide Service</span>
+              </div>
+              <div className="flex items-center">
+                <Users className="w-5 h-5 mr-2" />
+                <span>300K+ Followers</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-secondary/20 rounded-full animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 left-20 w-12 h-12 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '4s' }} />
+        {/* Interactive Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-white/20 to-primary/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-20 left-20 w-12 h-12 bg-gradient-to-br from-secondary/20 to-white/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/3 right-10 w-8 h-8 bg-yellow-400/30 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-pink-400/30 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '3s' }} />
       </section>
 
       {/* Stats Section */}
