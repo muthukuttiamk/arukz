@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gradient" style={{ fontFamily: 'Inter, sans-serif' }}>arukz</span>
+            <span className="text-2xl font-bold text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -106,7 +106,7 @@ const Services = () => {
                 <span className="text-primary text-sm font-medium">360° Digital Growth Partner</span>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient" style={{ fontFamily: 'Inter, sans-serif' }}>arukz – Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz – Services</h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
               Modern, minimal, responsive, and professional digital marketing and technology solutions for your business growth
             </p>
@@ -233,8 +233,9 @@ const ServiceCard = ({ service, delay }: { service: any; delay: number }) => {
   const { icon: Icon, title, description } = service;
   
   return (
-    <div 
-      className="card-premium group hover:scale-105 transition-all duration-300 cursor-pointer scroll-reveal" 
+    <Link 
+      to={`/services/${service.id}`}
+      className="card-premium group hover:scale-105 transition-all duration-300 cursor-pointer scroll-reveal hover-lift" 
       style={{ animationDelay: `${delay}s` }}
     >
       <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-300">
@@ -250,7 +251,7 @@ const ServiceCard = ({ service, delay }: { service: any; delay: number }) => {
         Learn More
         <ArrowRight className="ml-1 w-4 h-4" />
       </div>
-    </div>
+    </Link>
   );
 };
 
