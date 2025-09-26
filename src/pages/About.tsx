@@ -22,7 +22,7 @@ const About = () => {
         <div className="absolute inset-0 hero-gradient opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">About Arukz</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">About arukz</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Empowering businesses with strategic digital marketing solutions that drive real growth and meaningful engagement.
             </p>
@@ -38,14 +38,48 @@ const About = () => {
               <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Arukz was born from a passion for helping businesses thrive in the digital age. What started as a personal interest in social media marketing has evolved into a comprehensive digital marketing agency that serves businesses, political campaigns, traditional events, and devotional pages across India, with a special focus on Chennai and Tamil Nadu.
+                  At <strong>arukz</strong>, we believe innovation begins where passion meets purpose. Founded with the vision of building future-ready digital solutions, our journey is driven by a shared commitment to technology, creativity, and impact.
                 </p>
                 <p>
-                  Our founder brings a unique blend of technical expertise as a DevOps Engineer in Chennai and practical social media marketing experience. This combination allows us to approach digital marketing with both strategic thinking and technical precision.
+                  What started as an idea soon grew into a mission: to design, develop, and deliver products and services that empower businesses, transform experiences, and create meaningful connections in a digital-first world.
                 </p>
-                <p>
-                  We've successfully built and managed multiple Facebook pages with hundreds of thousands of followers, giving us deep insights into what resonates with local audiences and how to create content that drives genuine engagement.
+              </div>
+              
+              <div className="mt-12">
+                <h3 className="text-3xl font-bold mb-8 text-foreground">The Founding Team</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Our strength lies in the diverse expertise of our co-founders, who bring a unique balance of engineering brilliance, design thinking, and strategic vision:
                 </p>
+                
+                <div className="space-y-8">
+                  <div className="card-premium">
+                    <h4 className="text-xl font-bold text-primary mb-3">Muthukutti Arunachalam, DevOps Engineer & Designer</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      A master of automation, scalability, and cloud-native workflows, Muthukutti blends technical depth with creative design thinking. His ability to integrate DevOps culture with user-centered design ensures that every arukz solution is not only efficient and resilient but also elegant and user-friendly.
+                    </p>
+                  </div>
+                  
+                  <div className="card-premium">
+                    <h4 className="text-xl font-bold text-primary mb-3">Jayasuruya, Full Stack Developer & System Architect</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      With an architect's mind and a developer's precision, Jayasuruya specializes in building robust, scalable, and secure digital ecosystems. His expertise in full stack development and system architecture powers arukz platforms to run seamlessly, ensuring performance, reliability, and innovation at every layer.
+                    </p>
+                  </div>
+                  
+                  <div className="card-premium">
+                    <h4 className="text-xl font-bold text-primary mb-3">Antony Raja, Full Stack Developer & Marketing Head</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Bridging technology with strategy, Antony brings a rare blend of engineering and market acumen. As a skilled full stack developer, he drives product excellence, while his leadership in marketing ensures arukz solutions are not only built with innovation but also delivered with impact to the right audience.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="mt-12">
+                  <h3 className="text-3xl font-bold mb-6 text-foreground">The arukz Vision</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Together, we are more than just technologists—we are storytellers of the digital era. Our shared vision is to transform ideas into powerful realities by fusing technology, creativity, and strategy. Every project at arukz is a step toward building a smarter, more connected, and more sustainable digital world.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="scroll-reveal">

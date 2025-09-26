@@ -49,7 +49,7 @@ const Home = () => {
       name: 'Rajesh Kumar',
       role: 'Business Owner',
       company: 'Local Restaurant Chain',
-      content: 'Arukz transformed our social media presence completely. Our engagement increased by 300% and footfall doubled within 3 months.',
+      content: 'arukz transformed our social media presence completely. Our engagement increased by 300% and footfall doubled within 3 months.',
       rating: 5
     },
     {
@@ -63,7 +63,7 @@ const Home = () => {
       name: 'Arun Krishnan',
       role: 'Political Campaign Manager',
       company: 'Local Elections',
-      content: 'Professional, reliable, and results-driven. Arukz helped us reach thousands of voters effectively through targeted campaigns.',
+      content: 'Professional, reliable, and results-driven. arukz helped us reach thousands of voters effectively through targeted campaigns.',
       rating: 5
     }
   ];
@@ -101,20 +101,24 @@ const Home = () => {
                 </span>
                 <Zap className="absolute -top-2 -right-8 w-6 h-6 text-yellow-400 animate-pulse" />
               </span>
-              <span className="block">with Arukz</span>
+              <span className="block">with arukz</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Social Media Marketing & Advertising Solutions across India with special focus on Chennai & Tamil Nadu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link to="/contact" className="btn-primary text-lg py-4 px-10 group relative overflow-hidden">
-                <span className="relative z-10">Get Started Today</span>
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+              <Link to="/contact" className="btn-primary text-lg py-4 px-10 group relative overflow-hidden whitespace-nowrap">
+                <span className="relative z-10 flex items-center">
+                  Get Started Today
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
                 <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
               </Link>
-              <Link to="/portfolio" className="btn-secondary text-lg py-4 px-10 bg-white/10 text-white border border-white/20 hover:bg-white/20 group">
-                View Our Work
-                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Link to="/portfolio" className="btn-secondary text-lg py-4 px-10 bg-white/10 text-white border border-white/20 hover:bg-white/20 group whitespace-nowrap">
+                <span className="flex items-center">
+                  View Our Work
+                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
               </Link>
             </div>
             <div className="flex justify-center items-center space-x-8 text-white/70">
@@ -176,7 +180,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="scroll-reveal">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Why Choose Arukz?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Why Choose arukz?</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 With years of experience in digital marketing and a proven track record of managing successful social media pages with thousands of followers, we bring expertise that drives real results.
               </p>
@@ -233,7 +237,7 @@ const Home = () => {
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">What Our Clients Say</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied clients have to say about working with Arukz.
+              Don't just take our word for it. Here's what our satisfied clients have to say about working with arukz.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -255,7 +259,7 @@ const Home = () => {
               Ready to Grow Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join hundreds of successful businesses that trust Arukz for their digital marketing needs.
+              Join hundreds of successful businesses that trust arukz for their digital marketing needs.
               Let's create something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
