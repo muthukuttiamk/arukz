@@ -1,4 +1,4 @@
-import { ExternalLink, Users, TrendingUp, Award } from 'lucide-react';
+import { ExternalLink, Users, TrendingUp, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import portfolioImage1 from '../assets/portfolio-1.jpg';
 import portfolioImage2 from '../assets/portfolio-2.jpg';
@@ -167,40 +167,84 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Managed Pages Section */}
+      {/* All Services Showcase */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">Pages We Manage</h2>
+            <h2 className="text-4xl font-bold mb-6 text-gradient">Complete Service Portfolio</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our expertise in managing successful Facebook pages with engaged communities of over 300,000 total followers.
+              Comprehensive digital marketing and technology solutions across 51 specialized services
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {managedPages.map((page, index) => (
-              <div key={index} className="card-premium scroll-reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{page.name}</h3>
-                    <span className="text-sm bg-secondary/10 text-secondary px-3 py-1 rounded-full">
-                      {page.category}
-                    </span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-gradient">{page.followers}</div>
-                    <div className="text-sm text-muted-foreground">Followers</div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground mb-4">{page.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Engagement Rate:</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    page.engagement === 'Excellent' ? 'bg-green-100 text-green-800' :
-                    page.engagement === 'Very High' ? 'bg-blue-100 text-blue-800' :
-                    'bg-yellow-100 text-yellow-800'
-                  }`}>
-                    {page.engagement}
-                  </span>
+          
+          {/* Service Categories Grid */}
+          <div className="space-y-16">
+            {[
+              {
+                title: "Core Digital Marketing Services",
+                services: [
+                  "Search Engine Optimization (SEO)", "Social Media Marketing (SMM)", "Pay-Per-Click (PPC) Advertising", 
+                  "Content Marketing", "Email Marketing & Automation", "Influencer Marketing", "Affiliate Marketing", 
+                  "Video Marketing", "Mobile Marketing", "Conversion Rate Optimization (CRO)"
+                ]
+              },
+              {
+                title: "Creative & Branding Solutions", 
+                services: [
+                  "Logo & Brand Identity Design", "Poster & Creative Design", "Social Media Content Creation",
+                  "Corporate Branding", "Packaging & Product Design", "Website Design & Development",
+                  "UI/UX Design", "Google Maps Business Profile Setup", "Brand Strategy Consulting", "Photography & Videography"
+                ]
+              },
+              {
+                title: "Advertising & Promotion",
+                services: [
+                  "Facebook & Instagram Ads", "LinkedIn Ads", "Twitter (X) Ads", "YouTube Ads", "OTT Platform Advertising",
+                  "Print & Outdoor Advertising", "TV & Radio Advertising", "Marketplace Advertising", "App Store Optimization (ASO)",
+                  "WhatsApp & Telegram Marketing", "Full-Spectrum Advertising Campaigns"
+                ]
+              },
+              {
+                title: "Regional-Level Advanced Services",
+                services: [
+                  "Full Social Media Creation & Management", "Podcast Marketing", "E-commerce Marketing", "Festive Campaign Marketing",
+                  "Regional Language Marketing", "Local SEO & Hyperlocal Ads", "Event Marketing (Online + Offline)", "PR & Media Coverage",
+                  "Customer Loyalty & Referral Programs", "Political & Election Campaign Management"
+                ]
+              },
+              {
+                title: "Global Future-Tech Services",
+                services: [
+                  "AI-Powered Marketing Automation", "Chatbot Development", "Programmatic Advertising", "AR/VR Marketing",
+                  "Metaverse Branding", "NFT & Web3 Marketing", "Voice Search Optimization", "Data Analytics & Predictive Insights",
+                  "Personalized Marketing with AI", "Cybersecurity & Brand Protection"
+                ]
+              }
+            ].map((category, categoryIndex) => (
+              <div key={categoryIndex} className="scroll-reveal">
+                <h3 className="text-2xl font-bold mb-8 text-gradient text-center">{category.title}</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                  {category.services.map((service, serviceIndex) => {
+                    const serviceId = categoryIndex * 10 + serviceIndex + 1;
+                    return (
+                      <Link 
+                        key={serviceIndex}
+                        to={`/services/${serviceId}`}
+                        className="card-premium text-center hover:scale-105 transition-all duration-300 group"
+                      >
+                        <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-3 group-hover:shadow-glow transition-all duration-300">
+                          <span className="text-white font-bold text-sm">{serviceId}</span>
+                        </div>
+                        <h4 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-tight">
+                          {service}
+                        </h4>
+                        <div className="mt-2 flex items-center justify-center text-primary text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                          Learn More
+                          <ArrowRight className="ml-1 w-3 h-3" />
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             ))}
