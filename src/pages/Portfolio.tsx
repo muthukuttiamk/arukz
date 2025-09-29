@@ -283,19 +283,19 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Arukz doubled our restaurant's social media following and increased customer visits by 200%. Outstanding results!",
-                author: "Rajesh Kumar",
-                role: "Restaurant Owner"
+                quote: "arukz doubled our sweet shop's social media following and increased customer visits by 200%. Outstanding results for local business!",
+                author: "Shanthi Sweets", 
+                role: "Sweet Shop - Tirunelveli"
               },
               {
-                quote: "Their political campaign management helped us reach over 50,000 voters effectively. Professional and reliable service.",
-                author: "Priya Sharma",
-                role: "Campaign Manager"
+                quote: "Their seafood marketing campaigns helped us reach customers across Tamil Nadu. Professional and reliable service.",
+                author: "Nila Sea Foods",
+                role: "Seafood Business - Tuticorin"
               },
               {
-                quote: "The poster designs for our cultural events were creative and engaging. Community response was phenomenal!",
-                author: "Arun Krishnan",
-                role: "Event Organizer"
+                quote: "The retail marketing strategies were creative and engaging. Our hypermarket saw tremendous growth!",
+                author: "Velavan Hypermarket",
+                role: "Retail Chain - Tuticorin"
               }
             ].map((testimonial, index) => (
               <div key={index} className="card-premium scroll-reveal" style={{ animationDelay: `${index * 0.1}s` }}>
