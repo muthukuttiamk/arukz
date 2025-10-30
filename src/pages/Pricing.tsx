@@ -66,15 +66,15 @@ const Pricing = () => {
 
   const testimonials = [
     {
-      name: 'Kavitha Menon',
-      business: 'Boutique Owner',
-      content: 'The Standard package transformed our business. Sales increased 200% in just 3 months!',
+      name: 'Shanthi Sweets',
+      business: 'Tirunelveli',
+      content: 'The Standard package transformed our business. Our online orders increased by 300% and customer footfall doubled in just 3 months!',
       rating: 5
     },
     {
-      name: 'Suresh Kumar',
-      business: 'Restaurant Chain',
-      content: 'Premium package delivered exceptional ROI. Our social media following grew from 500 to 25,000.',
+      name: 'Velavan Hypermarket',
+      business: 'Tuticorin',
+      content: 'Premium package delivered exceptional ROI. Their strategic campaigns helped us connect with thousands of local customers and boost our sales significantly.',
       rating: 5
     }
   ];
@@ -82,12 +82,19 @@ const Pricing = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-10" />
+      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">Pricing Plans</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-full px-6 py-2 border border-primary/20 mb-8">
+              <Star className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm font-medium">Flexible & Affordable</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient">Pricing Plans</h1>
+            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Transparent pricing with no hidden fees. Choose the perfect plan for your business growth needs.
             </p>
           </div>

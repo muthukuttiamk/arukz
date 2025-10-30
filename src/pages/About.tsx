@@ -26,12 +26,18 @@ const About = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-10" />
+      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient animate-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>About arukz</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-full px-6 py-2 border border-primary/20 mb-8">
+              <Target className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm font-medium">Your Trusted Digital Partner</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient animate-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>About arukz</h1>
+            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Empowering businesses with strategic digital solutions that drive real growth and meaningful connections in the digital age.
             </p>
           </div>

@@ -71,12 +71,19 @@ const Contact = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-10" />
+      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">Get In Touch</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-full px-6 py-2 border border-primary/20 mb-8">
+              <Mail className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm font-medium">We're Here to Help</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient">Get In Touch</h1>
+            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Ready to grow your business? Let's discuss your project and create a customized strategy that delivers results.
             </p>
           </div>

@@ -96,25 +96,29 @@ const Services = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-10" />
+      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
-            <div className="mb-6 flex justify-center">
-              <div className="flex items-center bg-primary/10 backdrop-blur-sm rounded-full px-6 py-2 border border-primary/20">
+            <div className="mb-8 flex justify-center">
+              <div className="flex items-center bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-full px-6 py-2 border border-primary/20">
                 <Target className="w-4 h-4 text-primary mr-2" />
                 <span className="text-primary text-sm font-medium">360° Digital Growth Partner</span>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz – Services</h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz – Services</h1>
+            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
               Modern, minimal, responsive, and professional digital marketing and technology solutions for your business growth
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary text-lg py-4 px-10">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/contact" className="btn-primary text-lg py-5 px-12 hover-lift">
                 Get Custom Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/pricing" className="btn-secondary text-lg py-4 px-10">
+              <Link to="/pricing" className="btn-secondary text-lg py-5 px-12 hover-lift">
                 View Pricing
               </Link>
             </div>
