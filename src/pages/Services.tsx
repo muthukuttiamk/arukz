@@ -7,6 +7,8 @@ import {
   Bot, Cpu, Zap, VolumeX, Shield, BarChart3, Brain, Headphones,
   MessageSquare, ArrowRight, CheckCircle
 } from 'lucide-react';
+import SEO from '../components/SEO';
+import { serviceSchema } from '../utils/structuredData';
 
 const Services = () => {
   const serviceCategories = [
@@ -94,7 +96,15 @@ const Services = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="51+ Digital Marketing Services | Social Media, SEO, Ads & More | Arukz"
+        description="Explore 51+ comprehensive digital marketing services including social media marketing, SEO, paid advertising, content creation, branding, and innovative future-tech solutions."
+        keywords="digital marketing services, social media marketing, SEO services, paid advertising, content marketing, branding services, creative design, advertising campaigns"
+        canonicalUrl="https://arukz.com/services"
+        structuredData={serviceSchema}
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0">
@@ -230,6 +240,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

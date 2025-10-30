@@ -1,5 +1,7 @@
 import { User, Target, Eye, Award, Users, TrendingUp, Lightbulb, Rocket, Heart, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { organizationSchema } from '../utils/structuredData';
 
 const About = () => {
   const values = [
@@ -24,7 +26,15 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="About Arukz - Leading Digital Marketing Agency | Our Story & Mission"
+        description="Learn about Arukz - Your trusted digital marketing partner. We combine innovation, expertise, and results to help businesses grow. Based in Tirunelveli, serving Tamil Nadu and beyond."
+        keywords="about arukz, digital marketing agency story, marketing team, Tirunelveli agency, Tamil Nadu marketing"
+        canonicalUrl="https://arukz.com/about"
+        structuredData={organizationSchema}
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0">
@@ -239,6 +249,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

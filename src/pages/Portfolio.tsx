@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import portfolioImage1 from '../assets/portfolio-1.jpg';
 import portfolioImage2 from '../assets/portfolio-2.jpg';
 import portfolioImage3 from '../assets/portfolio-3.jpg';
+import SEO from '../components/SEO';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -94,7 +95,14 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="Portfolio - Our Successful Digital Marketing Projects & Case Studies | Arukz"
+        description="Explore our portfolio of successful digital marketing campaigns, social media projects, and branding work. See real results from our 51+ comprehensive marketing services."
+        keywords="digital marketing portfolio, marketing case studies, social media campaigns, success stories, client work"
+        canonicalUrl="https://arukz.com/portfolio"
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 hero-gradient opacity-10" />
@@ -333,6 +341,7 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

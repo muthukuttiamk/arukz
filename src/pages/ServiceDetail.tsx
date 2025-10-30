@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, ArrowRight, Search, Share2, MousePointer, FileText, Mail, Users, Trophy, Video, Smartphone, TrendingUp, Palette, Eye, Globe, Package, Code, Map, Target, Camera, Facebook, Linkedin, Twitter, Youtube, Tv, Radio, ShoppingCart, Star, Megaphone, Calendar, Newspaper, Heart, Vote, Bot, Cpu, Zap, VolumeX, Shield, BarChart3, Brain, Headphones, MessageSquare } from 'lucide-react';
+import SEO from '../components/SEO';
+import { serviceBreadcrumb } from '../utils/structuredData';
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
@@ -220,7 +222,15 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title={`${currentService.title} - Digital Marketing Service | Arukz`}
+        description={currentService.description}
+        keywords={`${currentService.title}, digital marketing, ${currentService.category}`}
+        canonicalUrl={`https://arukz.com/services/${serviceId}`}
+        structuredData={serviceBreadcrumb(currentService.title, serviceId || '1')}
+      />
+      <div className="pt-20">
       {/* Header */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 hero-gradient opacity-10" />
@@ -365,6 +375,7 @@ const ServiceDetail = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

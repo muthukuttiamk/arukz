@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '../components/SEO';
+import { localBusinessSchema } from '../utils/structuredData';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -69,7 +71,15 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="Contact Arukz - Get Free Digital Marketing Consultation | Call +91-95978-41535"
+        description="Get in touch with Arukz for expert digital marketing services. Free consultation available. Call +91-95978-41535 or email arukzhq@gmail.com. Based in Tirunelveli, Tamil Nadu."
+        keywords="contact digital marketing agency, digital marketing consultation, Tirunelveli contact, Tamil Nadu marketing agency"
+        canonicalUrl="https://arukz.com/contact"
+        structuredData={localBusinessSchema}
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0">
@@ -321,6 +331,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

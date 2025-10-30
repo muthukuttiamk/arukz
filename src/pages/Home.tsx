@@ -5,6 +5,8 @@ import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { Share2, Megaphone, Palette, BarChart3 } from 'lucide-react';
 import heroImage from '../assets/hero-bg.jpg';
+import SEO from '../components/SEO';
+import { organizationSchema, websiteSchema } from '../utils/structuredData';
 
 const Home = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -90,7 +92,15 @@ const Home = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="Arukz - Leading Digital Marketing & Advertising Agency in Tamil Nadu | Social Media Marketing"
+        description="Transform your business with Arukz - Premier digital marketing agency specializing in social media marketing, SEO, paid advertising, content creation, and branding services. Serving Tirunelveli, Tuticorin & Chennai."
+        keywords="digital marketing agency, social media marketing, SEO services, paid advertising, content marketing, branding, Tirunelveli, Tuticorin, Tamil Nadu, India"
+        canonicalUrl="https://arukz.com"
+        structuredData={[organizationSchema, websiteSchema]}
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -348,6 +358,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

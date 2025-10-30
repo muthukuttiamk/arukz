@@ -1,6 +1,8 @@
 import { Check, Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PricingCard from '../components/PricingCard';
+import SEO from '../components/SEO';
+import { serviceSchema } from '../utils/structuredData';
 
 const Pricing = () => {
   const pricingPlans = [
@@ -80,7 +82,15 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO 
+        title="Affordable Digital Marketing Pricing Plans | Starting ₹4,999/month | Arukz"
+        description="Transparent pricing for social media marketing, SEO, and advertising services. Choose from Starter (₹4,999), Standard (₹9,999), or Premium (₹19,999) plans. No hidden fees."
+        keywords="digital marketing pricing, social media marketing cost, affordable SEO services, marketing packages, Tamil Nadu marketing prices"
+        canonicalUrl="https://arukz.com/pricing"
+        structuredData={serviceSchema}
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0">
@@ -241,6 +251,7 @@ const Pricing = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
