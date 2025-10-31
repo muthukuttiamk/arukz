@@ -19,12 +19,12 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</span>
+            <span className="text-2xl font-bold text-foreground hover:text-primary transition-colors" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</span>
           </Link>
 
           {/* Desktop Navigation */}

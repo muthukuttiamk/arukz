@@ -100,80 +100,58 @@ const Home = () => {
         canonicalUrl="https://arukz.com"
         structuredData={[organizationSchema, websiteSchema]}
       />
-      <div className="pt-20">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 hero-gradient opacity-90" />
+      <div className="pt-0">
+      {/* Hero Section - WPP Style */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000000]">
+        {/* Glowing plasma effect background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/40 via-primary/20 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-primary-variant/30 via-primary/10 to-transparent rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-primary/20 via-transparent to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in-up">
-            <div className="mb-4 flex justify-center">
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
-                <Sparkles className="w-4 h-4 text-yellow-400 mr-2" />
-                <span className="text-white text-sm font-medium">Digital Marketing Experts</span>
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-              Grow Your{' '}
-              <span className="relative inline-block">
-                <span className="text-gradient-secondary transition-all duration-500 ease-in-out">
-                  {animatedWords[currentWordIndex]}
-                </span>
-                <Zap className="absolute -top-2 -right-8 w-6 h-6 text-yellow-400 animate-pulse" />
-              </span>
-              <span className="block">with arukz</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Social Media Marketing & Advertising Solutions across India with special focus on Chennai & Tamil Nadu.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link to="/contact" className="btn-primary text-lg py-4 px-10 group relative overflow-hidden whitespace-nowrap">
-                <span className="relative z-10 flex items-center">
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
-              </Link>
-              <Link to="/portfolio" className="btn-secondary text-lg py-4 px-10 bg-white/10 text-white border border-white/20 hover:bg-white/20 group whitespace-nowrap">
-                <span className="flex items-center">
-                  View Our Work
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            </div>
-            <div className="flex justify-center items-center space-x-8 text-white/70">
-              <div className="flex items-center">
-                <Globe className="w-5 h-5 mr-2" />
-                <span>India Wide Service</span>
-              </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                <span>300K+ Followers</span>
-              </div>
-            </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10">
+          <h1 className="text-5xl md:text-8xl font-bold mb-8 animate-fade-in-up text-white leading-tight">
+            TRANSFORM YOUR BRAND
+            <br />
+            <span className="text-gradient">INTO DIGITAL SUCCESS</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            Delivering breakthrough intelligence and effective marketing solutions at speed and scale for businesses across Tamil Nadu.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <Link to="/contact">
+              <button className="text-lg px-12 py-7 bg-primary hover:bg-primary-variant text-white rounded-full font-semibold transition-all hover:scale-105 shadow-glow">
+                Get Started Today
+              </button>
+            </Link>
+            <Link to="/services">
+              <button className="text-lg px-12 py-7 border-2 border-white text-white hover:bg-white hover:text-black rounded-full font-semibold transition-all hover:scale-105">
+                View Our Services
+              </button>
+            </Link>
           </div>
         </div>
-
-        {/* Interactive Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-white/20 to-primary/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 left-20 w-12 h-12 bg-gradient-to-br from-secondary/20 to-white/20 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '4s' }} />
-        <div className="absolute top-1/3 right-10 w-8 h-8 bg-yellow-400/30 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-pink-400/30 rounded-full animate-float hover:scale-110 transition-transform cursor-pointer" style={{ animationDelay: '3s' }} />
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-32 bg-background relative overflow-hidden border-y border-border">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+              Proven <span className="text-gradient">Results</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Trusted by leading businesses across Tamil Nadu
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center scroll-reveal">
-                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{stat.number}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-bold text-gradient mb-4">{stat.number}</div>
+                <div className="text-lg text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -181,12 +159,18 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive digital marketing solutions tailored to grow your business and reach your target audience effectively.
+      <section className="py-32 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Comprehensive <span className="text-gradient">Digital Solutions</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From strategy to execution, we cover every aspect of your digital presence
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -200,36 +184,31 @@ const Home = () => {
       </section>
 
       {/* Advanced Digital Ecosystem Section */}
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
-        {/* Graphical Background Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 rounded-full gradient-primary blur-3xl animate-float" />
-          <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-yellow-400/20 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 rounded-full bg-pink-400/20 blur-2xl animate-float" style={{ animationDelay: '4s' }} />
-        </div>
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+              Your Complete Digital Growth
+              <br />
+              <span className="text-gradient">Ecosystem</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We architect comprehensive digital strategies that transform your brand's entire online presence into a revenue-generating powerhouse.
+            </p>
+          </div>
+          
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="scroll-reveal">
-              <div className="mb-4 flex items-center">
-                <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mr-4">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-primary font-semibold">Advanced Digital Ecosystem</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Next-Gen Marketing Intelligence</h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Powered by AI-driven insights, omnichannel strategies, and predictive analytics that transform businesses into digital powerhouses with measurable impact.
-              </p>
-              
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6">
                 <div className="flex items-start group">
                   <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mr-4 group-hover:shadow-glow transition-all duration-300">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-2">AI-Powered Campaign Optimization</h4>
-                    <p className="text-muted-foreground text-sm">Machine learning algorithms continuously optimize your campaigns for maximum ROI and engagement</p>
+                    <h4 className="font-bold text-xl text-foreground mb-2">AI-Powered Campaign Optimization</h4>
+                    <p className="text-muted-foreground">Machine learning algorithms continuously optimize your campaigns for maximum ROI and engagement</p>
                   </div>
                 </div>
                 
@@ -238,8 +217,8 @@ const Home = () => {
                     <Globe className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-2">Omnichannel Strategy Execution</h4>
-                    <p className="text-muted-foreground text-sm">Synchronized campaigns across 15+ platforms with unified brand messaging and analytics</p>
+                    <h4 className="font-bold text-xl text-foreground mb-2">Omnichannel Strategy Execution</h4>
+                    <p className="text-muted-foreground">Synchronized campaigns across 15+ platforms with unified brand messaging and analytics</p>
                   </div>
                 </div>
                 
@@ -248,67 +227,54 @@ const Home = () => {
                     <Target className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-2">Predictive Intelligence Dashboard</h4>
-                    <p className="text-muted-foreground text-sm">Real-time predictive insights that forecast trends and optimize budget allocation automatically</p>
+                    <h4 className="font-bold text-xl text-foreground mb-2">Predictive Intelligence Dashboard</h4>
+                    <p className="text-muted-foreground">Real-time predictive insights that forecast trends and optimize budget allocation automatically</p>
                   </div>
                 </div>
               </div>
-              
-              <Link to="/about" className="btn-primary inline-flex items-center group">
-                <span>Explore Our Technology</span>
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
             
             <div className="scroll-reveal">
-              <div className="relative">
-                {/* Interactive Cards with Graphical Elements */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="card-premium hover-lift relative overflow-hidden group">
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-blue-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                    <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-3">
-                      <TrendingUp className="w-6 h-6 text-green-600" />
-                    </div>
-                    <h4 className="font-bold text-primary mb-2">Revenue Growth</h4>
-                    <p className="text-3xl font-bold text-gradient">+340%</p>
-                    <p className="text-sm text-muted-foreground">Average client increase</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="card-premium hover-lift relative overflow-hidden group">
+                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-blue-500 opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-3">
+                    <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
-                  
-                  <div className="card-premium hover-lift relative overflow-hidden group">
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                    <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-3">
-                      <Users className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <h4 className="font-bold text-primary mb-2">Audience Reach</h4>
-                    <p className="text-3xl font-bold text-gradient">2.5M+</p>
-                    <p className="text-sm text-muted-foreground">Monthly impressions</p>
-                  </div>
-                  
-                  <div className="card-premium hover-lift relative overflow-hidden group">
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-red-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                    <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-3">
-                      <Target className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <h4 className="font-bold text-primary mb-2">Conversion Rate</h4>
-                    <p className="text-3xl font-bold text-gradient">18.5%</p>
-                    <p className="text-sm text-muted-foreground">Above industry avg</p>
-                  </div>
-                  
-                  <div className="card-premium hover-lift relative overflow-hidden group">
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                    <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-3">
-                      <Star className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h4 className="font-bold text-primary mb-2">Client Satisfaction</h4>
-                    <p className="text-3xl font-bold text-gradient">98.7%</p>
-                    <p className="text-sm text-muted-foreground">Retention rate</p>
-                  </div>
+                  <h4 className="font-bold text-primary mb-2">Revenue Growth</h4>
+                  <p className="text-3xl font-bold text-gradient">+340%</p>
+                  <p className="text-sm text-muted-foreground">Average client increase</p>
                 </div>
                 
-                {/* Floating Animation Elements */}
-                <div className="absolute -top-8 -left-8 w-4 h-4 rounded-full bg-yellow-400 animate-bounce opacity-60" />
-                <div className="absolute -bottom-4 -right-8 w-6 h-6 rounded-full bg-pink-400 animate-pulse opacity-40" />
-                <div className="absolute top-1/2 -left-4 w-3 h-3 rounded-full bg-blue-400 animate-ping opacity-50" />
+                <div className="card-premium hover-lift relative overflow-hidden group">
+                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-3">
+                    <Users className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h4 className="font-bold text-primary mb-2">Audience Reach</h4>
+                  <p className="text-3xl font-bold text-gradient">2.5M+</p>
+                  <p className="text-sm text-muted-foreground">Monthly impressions</p>
+                </div>
+                
+                <div className="card-premium hover-lift relative overflow-hidden group">
+                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-red-500 opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-3">
+                    <Target className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <h4 className="font-bold text-primary mb-2">Conversion Rate</h4>
+                  <p className="text-3xl font-bold text-gradient">18.5%</p>
+                  <p className="text-sm text-muted-foreground">Above industry avg</p>
+                </div>
+                
+                <div className="card-premium hover-lift relative overflow-hidden group">
+                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-3">
+                    <Star className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-bold text-primary mb-2">Client Satisfaction</h4>
+                  <p className="text-3xl font-bold text-gradient">98.7%</p>
+                  <p className="text-sm text-muted-foreground">Retention rate</p>
+                </div>
               </div>
             </div>
           </div>
@@ -316,10 +282,12 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">What Our Clients Say</h2>
+      <section className="py-32 bg-muted/30 relative overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+              Client <span className="text-gradient">Success Stories</span>
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied clients have to say about working with arukz.
             </p>
@@ -335,25 +303,31 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-95" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Grow Your Business?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join hundreds of successful businesses that trust arukz for their digital marketing needs.
-              Let's create something amazing together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-secondary bg-white text-primary hover:bg-white/90 text-lg py-4 px-10">
-                Start Your Project
-              </Link>
-              <Link to="/pricing" className="btn-secondary bg-white/10 text-white border border-white/20 hover:bg-white/20 text-lg py-4 px-10">
-                View Pricing
-              </Link>
-            </div>
+      <section className="py-32 bg-[#000000] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            Ready to Transform Your
+            <br />
+            <span className="text-gradient">Digital Presence?</span>
+          </h2>
+          <p className="text-xl md:text-2xl mb-12 text-gray-300">
+            Partner with Arukz and experience data-driven digital marketing that delivers measurable results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link to="/contact">
+              <button className="text-lg px-12 py-7 bg-primary hover:bg-primary-variant text-white rounded-full font-semibold transition-all hover:scale-105 shadow-glow">
+                Schedule a Consultation
+              </button>
+            </Link>
+            <Link to="/pricing">
+              <button className="text-lg px-12 py-7 border-2 border-white text-white hover:bg-white hover:text-black rounded-full font-semibold transition-all hover:scale-105">
+                View Pricing Plans
+              </button>
+            </Link>
           </div>
         </div>
       </section>
