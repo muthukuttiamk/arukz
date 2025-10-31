@@ -36,9 +36,13 @@ const About = () => {
       />
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-32 relative overflow-hidden bg-background">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-purple-500/10 to-secondary/10"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(79,70,229,0.15),transparent_50%)]"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -72,18 +76,16 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="scroll-reveal animate-slide-in-right">
-              <div className="card-premium hover-lift">
-                <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6">
-                  <User className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Why Choose arukz?</h3>
-                <div className="space-y-4 text-muted-foreground">
-                  <p><strong>Professional Expertise:</strong> DevOps Engineers & Full Stack Developers</p>
-                  <p><strong>Proven Track Record:</strong> Managing 300K+ followers across platforms</p>
-                  <p><strong>Innovation Focus:</strong> Cutting-edge technologies and AI integration</p>
-                  <p><strong>Results-Driven:</strong> Measurable growth and business impact</p>
-                </div>
+            <div className="scroll-reveal animate-slide-in-right relative">
+              <div className="relative overflow-hidden rounded-3xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/20 to-secondary/20 blur-3xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                  alt="arukz team collaboration" 
+                  className="w-full h-full object-cover rounded-3xl shadow-2xl hover-lift"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>
@@ -228,7 +230,12 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-secondary" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="scroll-reveal">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
