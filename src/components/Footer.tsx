@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <span className="text-2xl font-bold text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</span>
+              <span className="text-2xl font-bold text-gradient" style={{ fontFamily: 'poppins, poppins' }}>arukz</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Premium Social Media Marketing & Advertising agency helping brands in Tirunelveli, Tuticorin, Kanyakumari & Tenkasi grow online.
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+        <div className="mt-12 pt-8 border-t border-border text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between" style={{ fontFamily: 'Open Sans, poppins' }}>
           <p>© {new Date().getFullYear()} arukz. All rights reserved.</p>
           <p>Built with care • Digital growth for local brands</p>
         </div>

@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+        poppins: ['Poppins', 'poppins'],
+        sans: ['Open Sans', 'system-ui', 'poppins'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

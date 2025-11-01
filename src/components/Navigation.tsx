@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-foreground hover:text-primary transition-colors" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</span>
+            <span className="text-2xl font-bold text-foreground hover:text-primary transition-colors" style={{ fontFamily: 'poppins, poppins' }}>arukz</span>
           </Link>
 
           {/* Desktop Navigation */}

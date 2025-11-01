@@ -89,7 +89,7 @@ const Blog = () => {
                 <Tag className="w-4 h-4 text-primary mr-2" />
                 <span className="text-primary text-sm font-medium">Marketing Insights & Expertise</span>
               </div>
-              <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>Marketing Blog</h1>
+              <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient" style={{ fontFamily: 'Open Sans, poppins' }}>Marketing Blog</h1>
               <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Expert insights, proven strategies, and actionable tips to grow your business through digital marketing.
               </p>

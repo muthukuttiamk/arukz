@@ -50,7 +50,7 @@ const About = () => {
               <Target className="w-4 h-4 text-primary mr-2" />
               <span className="text-primary text-sm font-medium">Your Trusted Digital Partner</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient animate-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>About arukz</h1>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient animate-gradient" style={{ fontFamily: 'Open Sans, poppins' }}>About arukz</h1>
             <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Empowering businesses with strategic digital solutions that drive real growth and meaningful connections in the digital age.
             </p>
@@ -66,7 +66,7 @@ const About = () => {
               <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  At <strong style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz</strong>, we believe innovation begins where passion meets purpose. Founded with the vision of building future-ready digital solutions, our journey is driven by a shared commitment to technology, creativity, and impact.
+                  At <strong style={{ fontFamily: 'Open Sans, poppins' }}>arukz</strong>, we believe innovation begins where passion meets purpose. Founded with the vision of building future-ready digital solutions, our journey is driven by a shared commitment to technology, creativity, and impact.
                 </p>
                 <p>
                   What started as an idea soon grew into a mission: to design, develop, and deliver products and services that empower businesses, transform experiences, and create meaningful connections in a digital-first world.

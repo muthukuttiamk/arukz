@@ -119,14 +119,13 @@ const Services = () => {
                 <span className="text-primary text-sm font-medium">360° Digital Growth Partner</span>
               </div>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient" style={{ fontFamily: 'Open Sans, sans-serif' }}>arukz – Services</h1>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-gradient" style={{ fontFamily: 'Open Sans, poppins' }}>arukz – Services</h1>
             <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
               Modern, minimal, responsive, and professional digital marketing and technology solutions for your business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/contact" className="btn-primary text-lg py-5 px-12 hover-lift">
                 Get Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link to="/pricing" className="btn-secondary text-lg py-5 px-12 hover-lift">
                 View Pricing

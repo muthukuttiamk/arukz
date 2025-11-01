@@ -50,7 +50,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      details: ['Tirunelveli, Tamil Nadu', 'Chennai (DevOps Office)'],
+      details: ['Tamil Nadu, India'],
       action: '#'
     },
     {
