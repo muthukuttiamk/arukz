@@ -14,15 +14,25 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import { initGA, trackPageView } from "./utils/analytics";
 
 const queryClient = new QueryClient();
 
 const ScrollReveal = () => {
   const location = useLocation();
   useEffect(() => {
+    // Initialize Google Analytics on first load
+    initGA();
+  }, []);
+
+  useEffect(() => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
+    
+    // Track page view
+    trackPageView(location.pathname + location.search);
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -37,7 +47,7 @@ const ScrollReveal = () => {
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
   return null;
 };
 
@@ -63,6 +73,7 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

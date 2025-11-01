@@ -1,3 +1,12 @@
+# Arukz Digital Marketing Agency - Robots.txt
+# Optimized for maximum SEO visibility
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Specific bots
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +19,14 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://arukz.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

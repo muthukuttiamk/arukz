@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import SEO from '../components/SEO';
-import { localBusinessSchema } from '../utils/structuredData';
+import { localBusinessSchema, faqSchema } from '../utils/structuredData';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +70,25 @@ const Contact = () => {
     'Other'
   ];
 
+  const faqs = [
+    {
+      question: 'How quickly can you start working on my project?',
+      answer: 'We can typically start within 2-3 business days after our initial consultation and agreement on project scope.'
+    },
+    {
+      question: 'Do you work with businesses outside Tamil Nadu?',
+      answer: 'Yes, while we\'re based in Tamil Nadu, we work with clients across India and can adapt our strategies for different regional markets.'
+    },
+    {
+      question: 'What makes Arukz different from other agencies?',
+      answer: 'Our unique combination of technical expertise (DevOps background) and proven social media success (300K+ followers managed) gives us a strategic edge in digital marketing.'
+    },
+    {
+      question: 'Do you provide monthly reports?',
+      answer: 'Yes, we provide detailed monthly reports showing engagement metrics, growth statistics, and campaign performance with actionable insights.'
+    }
+  ];
+
   return (
     <>
       <SEO 
@@ -77,7 +96,7 @@ const Contact = () => {
         description="Get in touch with Arukz for expert digital marketing services. Free consultation available. Call +91-95978-41535 or email arukzhq@gmail.com. Based in Tirunelveli, Tamil Nadu."
         keywords="contact digital marketing agency, digital marketing consultation, Tirunelveli contact, Tamil Nadu marketing agency"
         canonicalUrl="https://arukz.com/contact"
-        structuredData={localBusinessSchema}
+        structuredData={[localBusinessSchema, faqSchema(faqs)]}
       />
       <div className="pt-20">
       {/* Hero Section */}
@@ -304,24 +323,7 @@ const Contact = () => {
             <h2 className="text-4xl font-bold mb-6 text-gradient">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How quickly can you start working on my project?',
-                answer: 'We can typically start within 2-3 business days after our initial consultation and agreement on project scope.'
-              },
-              {
-                question: 'Do you work with businesses outside Tamil Nadu?',
-                answer: 'Yes, while we\'re based in Tamil Nadu, we work with clients across India and can adapt our strategies for different regional markets.'
-              },
-              {
-                question: 'What makes Arukz different from other agencies?',
-                answer: 'Our unique combination of technical expertise (DevOps background) and proven social media success (300K+ followers managed) gives us a strategic edge in digital marketing.'
-              },
-              {
-                question: 'Do you provide monthly reports?',
-                answer: 'Yes, we provide detailed monthly reports showing engagement metrics, growth statistics, and campaign performance with actionable insights.'
-              }
-            ].map((faq, index) => (
+            {faqs.map((faq, index) => (
               <div key={index} className="card-premium scroll-reveal" style={{ animationDelay: `${index * 0.1}s` }}>
                 <h3 className="text-lg font-semibold mb-3 text-foreground">{faq.question}</h3>
                 <p className="text-muted-foreground">{faq.answer}</p>

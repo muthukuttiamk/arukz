@@ -181,3 +181,89 @@ export const serviceBreadcrumb = (serviceName: string, serviceId: string) => ({
     }
   ]
 });
+
+// FAQ Schema
+export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+});
+
+// Article Schema for Blog Posts
+export const articleSchema = (article: {
+  title: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified: string;
+  author: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.title,
+  "description": article.description,
+  "image": article.image,
+  "datePublished": article.datePublished,
+  "dateModified": article.dateModified,
+  "author": {
+    "@type": "Organization",
+    "name": article.author || "Arukz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arukz",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arukz.com/arukz.jpg"
+    }
+  }
+});
+
+// Review Schema
+export const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Arukz",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Shanthi Sweets"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "The Standard package transformed our business. Our online orders increased by 300% and customer footfall doubled in just 3 months!"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Velavan Hypermarket"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Premium package delivered exceptional ROI. Their strategic campaigns helped us connect with thousands of local customers."
+    }
+  ]
+};
